@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAGENTS CLOTHING — Home</title>
+  <link rel="stylesheet" href="css/Style.css">
+</head>
+<body class="order">
+  <header class="site-header">
+    <a href="index.html" class="brand">AMAGENTS CLOTHING</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html" class="active">Place Order</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Place Your Order</h1>
+      <p>Fill in your details to order your custom suit or tuxedo.</p>
+    </section>
+
+    <section class="features">
+      <form class="order-form" action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="suit">Select Item:</label>
+        <select id="suit" name="suit">
+          <option>Classic Black Suit</option>
+          <option>Navy Blue Tuxedo</option>
+          <option>Grey Three-Piece</option>
+        </select>
+
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" placeholder="e.g., 40R, 42L" required>
+
+        <button type="submit" class="btn">Submit Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 AMAGENTS CLOTHING. All rights reserved.</p>
+  </footer>
+</body>

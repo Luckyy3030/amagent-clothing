@@ -1,0 +1,216 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Home Page Hero Floating Tuxedo */
+body.home .hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+body.home .hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%; /* Adjust size of the tuxedo */
+  height: 100%;
+  background: url("images/tuxedo.png") no-repeat right bottom;
+  background-size: contain;
+  opacity: 0.25; /* Subtle so text remains readable */
+  z-index: 0;
+}
+
+/* Optional: make it responsive */
+@media (max-width: 768px) {
+  body.home .hero::before {
+    width: 50%;
+    opacity: 0.15; /* less visible on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body.home .hero::before {
+    display: none; /* hide on mobile for readability */
+  }
+}
+
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Dark overlay for readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* === PREMIUM NAVBAR === */
+.site-header {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f4c542;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #f4c542;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #f4c542;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* === FEATURES GRID === */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.features article {
+  background: rgba(0,0,0,0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* === FORMS === */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #f4c542;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .main-nav ul { gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 4rem 1rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .btn { padding: 0.6rem 1rem; }
+}
+
+/* === PAGE BACKGROUNDS === */
+body.home { background-image: url("images/background-home-suit.jpg"); }
+body.about { background-image: url("images/background-about.jpg"); }
+body.menu { background-image: url("images/background-products.jpg"); }
+body.order { background-image: url("images/background-order.jpg"); }
+body.team { background-image: url("images/background-team.jpg"); }
+body.contact { background-image: url("images/background-contact.jpg"); }
